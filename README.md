@@ -29,7 +29,7 @@ qcVideo.use('base',(base)=>{
 ```
 异步: 
 qcVideo.get('base',(base){  
-console.log(base.fn())  
+    console.log(base.fn())  
 })
 ```
     
