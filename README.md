@@ -13,7 +13,7 @@ qcVideo('base',function(){
         return 'do something'
         }
     }
-   })
+})
 ```
 
 - 异步加载
