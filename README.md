@@ -4,26 +4,38 @@
 
 ## 功能支持
 
-- 异步加载
-
-```qcVideo.use('moduleName',()=>{/*回调函数 */})```
-
 - 定义模块
 
-```qcVideo('base',()=>{/*定义模块内容*/})```
+```qcVideo('base',function(){  
+    return {
+    'fn':function(){
+        return 'do something'
+        }
+    }
+   })
+```
+
+- 异步加载
+
+```qcVideo.use('base',(base)=>{
+    console.log(base.fn())
+})
+```
 
 - 调用模块
 
-```异步：```  
-```qcVideo.get('base',(base){```  
-```console.log('base',base)```  
-```})```
+```异步: 
+qcVideo.get('base',(base){  
+console.log(base.fn())  
+})
+```
     
 
-```同步：```  
-```console.log('base',qcVideo.get('base'))```
+```同步：  
+console.log('base',qcVideo.get('base'))
+```
 
-- 引用模块：
+- 定义+调用：
 
 ```qcVideo('myComponents ',(module1,module2)=>{```  
 ```console.log(module1,module2)```  
