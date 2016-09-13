@@ -1,35 +1,31 @@
 # qcVideo
 
-你所见过的最精简的javascript模块管理器
+可能是你遇见最精简的js模块管理器
 
-## 支持
+## 功能支持
 
 - 异步加载
 
-``` 
-    qcVideo.use('moduleName',()=>{/*回调函数 */})
-```
-
+```qcVideo.use('moduleName',()=>{/*回调函数 */})```
 
 - 定义模块
 
-``` 
-    qcVideo('base',()=>{/*定义模块内容*/})
-  ```
+```qcVideo('base',()=>{/*定义模块内容*/})```
 
 - 调用模块
 
-``` 
-    异步：qcVideo.get('base',asyncCallback)
-   ```
+```异步：```  
+```qcVideo.get('base',(base){```  
+```console.log('base',base)```  
+```})```
+    
 
-``` 
-    同步：let module =qcVideo.get('base')
-  ```
+```同步：```  
+```console.log('base',qcVideo.get('base'))```
 
 - 引用模块：
 
-``` 
-    qcVideo('myComponents ',(base)=>{/*base可此处直接使用*/})
- ```
+```qcVideo('myComponents ',(module1,module2)=>{```  
+```console.log(module1,module2)```  
+```})```
 
