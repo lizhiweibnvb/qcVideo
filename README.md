@@ -37,7 +37,11 @@ console.log('base',qcVideo.get('base'))
 
 - 定义+调用：
 
-```qcVideo('myComponents ',(module1,module2)=>{```  
-```console.log(module1,module2)```  
-```})```
+```qcVideo('myComponents ',(module1,module2)=>{  
+    return {
+        'fn1':function(){return module1},
+        'fn2':function(){return module2}
+    }
+})
+```
 
